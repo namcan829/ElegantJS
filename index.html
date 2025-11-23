@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegat Bootstrap Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .carousel-indicators [data-bs-target] {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid #198754;
+            opacity: 1;
+            margin: 0 6px;
+            transition: all 0.3s ease;
+        }
+
+
+        .carousel-indicators .active {
+            background-color: #198754;
+
+        }
+
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            gap: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .icon-option {
+            cursor: pointer;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .icon-option:hover {
+            background-color: #198754;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .icon-option i {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+
+        #selected-icon-preview {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            color: #198754;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+
+    <header class="py-4">
+        <div class="container px-5 px-lg-5">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm rounded-3 px-lg-4 py-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold fs-3 text-secondary" href="#">Elegat</a>
+                    <div class="d-flex align-items-center order-lg-last">
+                        <a href="#" class="btn btn-success rounded-pill px-4 fw-normal">Get Started</a>
+                        <button class="navbar-toggler border-0 ms-2 p-0" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#mainMenu" aria-controls="mainMenu" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="mainMenu">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                            <li class="nav-item px-2"><a class="nav-link text-secondary" href="#">Home</a></li>
+                            <li class="nav-item px-2"><a class="nav-link text-secondary" href="#">About</a></li>
+                            <li class="nav-item px-2"><a class="nav-link text-secondary" href="#">Services</a></li>
+                            <li class="nav-item px-2"><a class="nav-link text-secondary" href="#">Portfolio</a></li>
+                            <li class="nav-item px-2"><a class="nav-link text-secondary" href="#">Team</a></li>
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu text-center text-lg-start border-0 shadow-sm"
+                                    aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item px-2"><a class="nav-link text-secondary" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-5">
+            <div class="container px-5 px-lg-5 p-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-2 order-lg-1 mt-4 mt-lg-0">
+                        <h1 class="display-5 fw-bold text-secondary mb-3">
+                            Elegant and creative solutions
+                        </h1>
+                        <p class="lead text-muted mb-4">
+                            We are team of talented designers making websites with Bootstrap
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" class="btn btn-success rounded-pill px-4 py-2 me-4">Get Started</a>
+                            <a href="https://www.youtube.com/watch?v=oHg5SJYRHA0" class="text-decoration-none text-secondary d-flex align-items-center gap-2">
+                                <i class="bi bi-play-circle text-success fs-2 lh-1"></i>
+                                <span class="fw-normal text-dark">Watch Video</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 mb-5 mb-lg-0 text-center">
+                        <img src="Img/Image1.png" alt="Team working" class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-5">
+            <div class="container px-5 px-lg-5 p-5">
+                <div class="row g-4 g-lg-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class=" bg-light p-5 rounded-3 h-100 shadow-sm">
+                            <div class="mb-4">
+                                <i class="bi bi-activity text-success fs-2"></i>
+                            </div>
+                            <h4 class="fw-bold text-secondary mb-3">Lorem Ipsum</h4>
+                            <p class="text-muted mb-0">
+                                Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class=" bg-light p-5 rounded-3 h-100 shadow-sm">
+                            <div class="mb-4">
+                                <i class="bi bi-bounding-box-circles text-success fs-2"></i>
+                            </div>
+                            <h4 class="fw-bold text-secondary mb-3">Sed ut perspici</h4>
+                            <p class="text-muted mb-0">
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class=" bg-light p-5 rounded-3 h-100 shadow-sm">
+                            <div class="mb-4">
+                                <i class="bi bi-calendar4-week text-success fs-2"></i>
+                            </div>
+                            <h4 class="fw-bold text-secondary mb-3">Magni Dolores</h4>
+                            <p class="text-muted mb-0">
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-5">
+            <div class="container px-5 px-lg-5 p-5">
+                <div class="text-center mb-5">
+                    <div class="position-relative d-inline-block">
+
+                        <span class="text-uppercase fw-bold position-absolute start-50 translate-middle"
+                            style="font-size: 3rem; color: #f0f2f5; z-index: -1; white-space: nowrap; user-select: none;">
+                            About Us
+                        </span>
+
+                        <h2 class="fw-bold text-uppercase text-secondary position-relative m-0" style="z-index: 1;">
+                            About</h2>
+                    </div>
+
+                    <p class="text-muted mx-auto mt-3" style="max-width: 700px;">
+                        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+                    </p>
+                </div>
+
+                <div class="row g-5 mb-5">
+                    <div class="col-lg-6">
+                        <img src="Img/Image1.png" alt="About Us" class="img-fluid rounded shadow-sm w-100">
+                    </div>
+                    <div class="col-lg-6">
+                        <h3 class="fw-bold text-secondary mb-3">Voluptatem dignissimos provident quasi corporis
+                            voluptates sit assumenda.</h3>
+                        <p class="fst-italic mb-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                        </p>
+                        <ul class="list-unstyled text-secondary mb-4">
+                            <li class="mb-2 d-flex">
+                                <i class="bi bi-check2-all text-success me-2 fs-5"></i>
+                                <span class="text-dark">Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                            </li>
+                            <li class="mb-2 d-flex">
+                                <i class="bi bi-check2-all text-success me-2 fs-5"></i>
+                                <span class="text-dark">Duis aute irure dolor in reprehenderit in voluptate
+                                    velit.</span>
+                            </li>
+                            <li class="mb-2 d-flex">
+                                <i class="bi bi-check2-all text-success me-2 fs-5"></i>
+                                <span class="text-dark">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                    aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore
+                                    eu fugiat nulla pariatur.</span>
+                            </li>
+                        </ul>
+                        <p class="text-dark">
+                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row text-center mt-5 gy-5">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <span class="d-block display-4 fw-bold text-success">232</span>
+                        <span class="text-secondary">Clients</span>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <span class="d-block display-4 fw-bold text-success">521</span>
+                        <span class="text-secondary">Projects</span>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <span class="d-block display-4 fw-bold text-success">1453</span>
+                        <span class="text-secondary">Hours Of Support</span>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <span class="d-block display-4 fw-bold text-success">32</span>
+                        <span class="text-secondary">Workers</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="py-5">
+            <div class="container px-5 bg-light p-5">
+                <div class="text-center mb-5">
+                    <div class="position-relative d-inline-block">
+                        <span class="text-uppercase fw-bold position-absolute start-50 translate-middle"
+                            style="font-size: 3rem; color: #f0f2f5; z-index: 1; white-space: nowrap; user-select: none;">
+                            SERVICES
+                        </span>
+                        <h2 class="fw-bold text-uppercase text-secondary position-relative m-0" style="z-index: 2;">
+                            SERVICES</h2>
+                    </div>
+                    <p class="text-muted mx-auto mt-3" style="max-width: 700px;">
+                        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+                    </p>
+                </div>
+
+                <div class="row g-4 gy-5" id="services-container">
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container px-5 px-lg-5 p-5">
+
+                <div class="text-center mb-5">
+                    <div class="position-relative d-inline-block">
+
+                        <span class="text-uppercase fw-bold position-absolute start-50 translate-middle"
+                            style="font-size: 3rem; color: #eaebec; z-index: -1; white-space: nowrap; user-select: none;">
+                            PORTFOLIO
+                        </span>
+
+                        <h2 class="fw-bold text-uppercase text-secondary position-relative m-0" style="z-index: 1;">
+                            PORTFOLIO</h2>
+                    </div>
+
+                    <p class="text-muted mx-auto mt-3" style="max-width: 700px;">
+                        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+                    </p>
+                </div>
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link text-success fw-bold text-uppercase" href="#">All</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary fw-bold text-uppercase" href="#">App</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary fw-bold text-uppercase" href="#">Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary fw-bold text-uppercase" href="#">Branding</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-secondary fw-bold text-uppercase" href="#">Books</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p1.jpg" alt="App 1" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p2.jpg" alt="Product 1" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p3.jpg" alt="Branding 1" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p4.jpg" alt="Books 1" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p5.jpg" alt="App 2" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p6.jpg" alt="Product 2" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p7.jpg" alt="Branding 2" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p8.jpg" alt="Books 2" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p9.jpg" alt="App 3" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p10.jpg" alt="App 3" class="img-flud w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p11.jpg" alt="App 3" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="portfolio-item overflow-hidden rounded shadow-sm h-100">
+                            <img src="Img/p12.jpg" alt="App 3" class="img-fluid w-100 h-100 object-fit-cover">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="py-5">
+            <div class="container px-5 px-lg-5 p-5 bg-light">
+                <div class="text-center mb-5">
+                    <div class="position-relative d-inline-block">
+                        <span class="text-uppercase fw-bold position-absolute start-50 translate-middle"
+                            style="font-size: 3rem; color: #f0f2f5; z-index: 1; white-space: nowrap; user-select: none;">
+                            TESTIMONIALS
+                        </span>
+                        <h2 class="fw-bold text-uppercase text-secondary position-relative m-0" style="z-index: 2;">
+                            TESTIMONIALS
+                        </h2>
+                    </div>
+                    <p class="text-muted mx-auto mt-3" style="max-width: 700px;">
+                        Ours clients speak for us
+                    </p>
+                </div>
+
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                    <div class="carousel-inner pb-5" id="testimonials-container">
+                    </div>
+
+                    <div class="carousel-indicators position-relative mt-4" id="testimonial-indicators">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container px-5 px-lg-5 p-5">
+
+                <div class="text-center mb-5">
+                    <div class="position-relative d-inline-block">
+
+                        <span class="text-uppercase fw-bold position-absolute start-50 translate-middle"
+                            style="font-size: 3rem; color: #eaebec; z-index: -1; white-space: nowrap; user-select: none;">
+                            TEAM
+                        </span>
+
+                        <h2 class="fw-bold text-uppercase text-secondary position-relative m-0" style="z-index: 1;">
+                            TEAM</h2>
+                    </div>
+
+                    <p class="text-muted mx-auto mt-3" style="max-width: 700px;">
+                        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+                    </p>
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-member h-100">
+                            <div class="member-img position-relative overflow-hidden rounded shadow-sm">
+                                <img src="Img/t1.jpg" alt="Walter White" class="img-fluid w-100 object-fit-cover"
+                                    style="height: 350px;">
+                            </div>
+
+                            <div class="bg-white shadow-sm p-4 mx-3 rounded position-relative"
+                                style="margin-top: -60px;">
+
+                                <h5 class="fw-bold text-secondary mb-3">Walter White</h5>
+
+                                <div class="border-bottom border-2 border-secondary opacity-25 mb-3"
+                                    style="width: 50px;"></div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <span class="text-muted fst-italic">Chief Executive Officer</span>
+
+                                    <div class="social-links">
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-twitter-x"></i></a>
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-facebook"></i></a>
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-instagram"></i></a>
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-member h-100">
+                            <div class="member-img position-relative overflow-hidden rounded shadow-sm">
+                                <img src="Img/t2.jpg" alt="Sarah Jhonson" class="img-fluid w-100 object-fit-cover"
+                                    style="height: 350px;">
+                            </div>
+
+                            <div class="bg-white shadow-sm p-4 mx-3 rounded position-relative"
+                                style="margin-top: -60px;">
+
+                                <h5 class="fw-bold text-secondary mb-3">Sarah Jhonson</h5>
+
+                                <div class="border-bottom border-2 border-secondary opacity-25 mb-3"
+                                    style="width: 50px;"></div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <span class="text-muted fst-italic">Product Manager</span>
+
+                                    <div class="social-links">
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-twitter-x"></i></a>
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-facebook"></i></a>
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-instagram"></i></a>
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="team-member h-100">
+                            <div class="member-img position-relative overflow-hidden rounded shadow-sm">
+                                <img src="Img/t3.jpg" alt="William Anderson" class="img-fluid w-100 object-fit-cover"
+                                    style="height: 350px;">
+                            </div>
+
+                            <div class="bg-white shadow-sm p-4 mx-3 rounded position-relative"
+                                style="margin-top: -60px;">
+
+                                <h5 class="fw-bold text-secondary mb-3">William Anderson</h5>
+
+                                <div class="border-bottom border-2 border-secondary opacity-25 mb-3"
+                                    style="width: 50px;"></div>
+
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <span class="text-muted fst-italic">CTO</span>
+
+                                    <div class="social-links">
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-twitter-x"></i></a>
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-facebook"></i></a>
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-instagram"></i></a>
+                                        <a href="#" class="text-dark fs-5 ms-2 text-decoration-none"><i
+                                                class="bi bi-linkedin"></i></a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="py-5">
+            <div class="container px-5 px-lg-5 p-5">
+
+                <div class="text-center mb-5">
+                    <div class="position-relative d-inline-block">
+
+                        <span class="text-uppercase fw-bold position-absolute start-50 translate-middle"
+                            style="font-size: 3rem; color: #eaebec; z-index: -1; white-space: nowrap; user-select: none;">
+                            CONTACT
+                        </span>
+
+                        <h2 class="fw-bold text-uppercase text-secondary position-relative m-0" style="z-index: 1;">
+                            Contact</h2>
+                    </div>
+
+                    <p class="text-muted mx-auto mt-3" style="max-width: 700px;">
+                        Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit
+                    </p>
+                </div>
+
+                <div class="row g-5">
+
+                    <div class="col-lg-6">
+                        <div class="bg-white shadow-sm rounded p-4 h-100">
+
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="d-flex align-items-center justify-content-center border border-success text-success rounded-circle fs-4 me-3 flex-shrink-0"
+                                    style="width: 50px; height: 50px;">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold text-secondary mb-1">Address</h5>
+                                    <p class="text-muted mb-0">A108 Adam Street, New York, NY 535022</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="d-flex align-items-center justify-content-center border border-success text-success rounded-circle fs-4 me-3 flex-shrink-0"
+                                    style="width: 50px; height: 50px;">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold text-secondary mb-1">Call Us</h5>
+                                    <p class="text-muted mb-0">+1 5589 55488 55</p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-start mb-4">
+                                <div class="d-flex align-items-center justify-content-center border border-success text-success rounded-circle fs-4 me-3 flex-shrink-0"
+                                    style="width: 50px; height: 50px;">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <div>
+                                    <h5 class="fw-bold text-secondary mb-1">Email Us</h5>
+                                    <p class="text-muted mb-0">info@example.com</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-4">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1839524752596!2d-74.0085080845936!3d40.71005667933163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+                                    style="border:0; width: 100%; height: 290px;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-6">
+                        <div class="bg-white shadow-sm rounded p-4 h-100">
+                            <form>
+                                <div class="row g-3">
+
+                                    <div class="col-md-6">
+                                        <label for="inputName" class="form-label text-secondary">Your Name</label>
+                                        <input type="text" class="form-control" id="inputName">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="inputEmail" class="form-label text-secondary">Your Email</label>
+                                        <input type="email" class="form-control" id="inputEmail">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="inputSubject" class="form-label text-secondary">Subject</label>
+                                        <input type="text" class="form-control" id="inputSubject">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="inputMessage" class="form-label text-secondary">Message</label>
+                                        <textarea class="form-control" id="inputMessage" rows="8"></textarea>
+                                    </div>
+
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="submit" class="btn btn-success rounded-pill px-5 py-2">Send
+                                            Message</button>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+    </main>
+    <footer class="mt-5">
+
+        <div class="newsletter-area py-5">
+            <div class="container px-5 px-lg-5 p-5 bg-light">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 text-center">
+                        <h4 class="fw-bold text-secondary mb-3">Join Our Newsletter</h4>
+                        <p class="text-muted mb-4">Subscribe to our newsletter and receive the latest news about our
+                            products and services!</p>
+
+                        <form action="">
+                            <div class="input-group mb-3 bg-white rounded-pill p-1 shadow-sm border">
+                                <input type="email" class="form-control border-0 bg-transparent ps-3"
+                                    placeholder="Enter your email" aria-label="Recipient's email">
+                                <button class="btn btn-success rounded-pill px-4" type="button">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-top py-5">
+            <div class="container px-5 px-lg-5">
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6 footer-about">
+                        <h3 class="fw-bold text-secondary mb-4">Elegat</h3>
+                        <p class="text-muted mb-1">A108 Adam Street</p>
+                        <p class="text-muted mb-3">New York, NY 535022</p>
+                        <p class="mb-1 text-muted"><strong>Phone:</strong> +1 5589 55488 55</p>
+                        <p class="mb-0 text-muted"><strong>Email:</strong> info@example.com</p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h5 class="fw-bold text-secondary mb-3">Useful Links</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="bi bi-chevron-right text-success small me-2"></i>Home</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="bi bi-chevron-right text-success small me-2"></i>About us</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="bi bi-chevron-right text-success small me-2"></i>Services</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="bi bi-chevron-right text-success small me-2"></i>Terms of service</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h5 class="fw-bold text-secondary mb-3">Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="bi bi-chevron-right text-success small me-2"></i>Web Design</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="bi bi-chevron-right text-success small me-2"></i>Web Development</a></li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="bi bi-chevron-right text-success small me-2"></i>Product Management</a>
+                            </li>
+                            <li class="mb-2"><a href="#" class="text-decoration-none text-muted"><i
+                                        class="bi bi-chevron-right text-success small me-2"></i>Marketing</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h5 class="fw-bold text-secondary mb-3">Follow Us</h5>
+                        <p class="text-muted">Cras fermentum odio eu feugiat lide par naso tierra videa magna derita
+                            valies</p>
+                        <div class="social-links mt-3">
+                            <a href="#"
+                                class="d-inline-flex align-items-center justify-content-center border border-secondary rounded-circle text-secondary text-decoration-none me-2"
+                                style="width: 40px; height: 40px;"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#"
+                                class="d-inline-flex align-items-center justify-content-center border border-secondary rounded-circle text-secondary text-decoration-none me-2"
+                                style="width: 40px; height: 40px;"><i class="bi bi-facebook"></i></a>
+                            <a href="#"
+                                class="d-inline-flex align-items-center justify-content-center border border-secondary rounded-circle text-secondary text-decoration-none me-2"
+                                style="width: 40px; height: 40px;"><i class="bi bi-instagram"></i></a>
+                            <a href="#"
+                                class="d-inline-flex align-items-center justify-content-center border border-secondary rounded-circle text-secondary text-decoration-none me-2"
+                                style="width: 40px; height: 40px;"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container px-5 px-lg-5">
+            <div class="copyright text-center pt-4 pb-4 border-top">
+                <div class="text-muted mb-1">
+                    © Copyright <strong><span class="text-dark">Elegat</span></strong> All Rights Reserved
+                </div>
+                <div class="credits text-muted small">
+                    Designed by <a href="#" class="text-success text-decoration-none">#anhtus</a> Distributed by <a
+                        href="#" class="text-success text-decoration-none">FSA</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="main.js">  </script>
+</body>
+
+</html>
